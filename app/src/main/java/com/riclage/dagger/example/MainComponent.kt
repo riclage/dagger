@@ -8,7 +8,7 @@ import dagger.android.AndroidInjectionModule
 @Component(modules = [MainModule::class, AndroidInjectionModule::class])
 interface MainComponent {
 
-    fun inject(mainActivity: MainApp)
+    fun inject(mainApp: MainApp)
 
     @Component.Builder
     interface Builder {
