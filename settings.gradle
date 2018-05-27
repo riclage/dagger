@@ -1,1 +1,1 @@
-include ':app', ':search.input'
+include ':app', ':search.input', ':search.result.view', ':search.result.provider'
