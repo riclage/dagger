@@ -5,12 +5,5 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_api"/>
-        <activity android:name=".SearchInputActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
     </application>
 </manifest>

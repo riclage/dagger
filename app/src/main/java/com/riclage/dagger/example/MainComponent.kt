@@ -4,8 +4,9 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
+import dagger.android.support.AndroidSupportInjectionModule
 
-@Component(modules = [MainModule::class, AndroidInjectionModule::class])
+@Component(modules = [MainModule::class, AndroidInjectionModule::class, AndroidSupportInjectionModule::class])
 interface MainComponent {
 
     fun inject(mainApp: MainApp)

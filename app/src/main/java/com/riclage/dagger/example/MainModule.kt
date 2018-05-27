@@ -1,7 +1,6 @@
 package com.riclage.dagger.example
 
-import com.riclage.blablalines.search.input.SearchInputActivity
-import com.riclage.blablalines.search.input.SearchInputModule
+import android.app.Activity
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -10,11 +9,12 @@ import dagger.android.ContributesAndroidInjector
 @Module
 interface MainModule {
     @Binds
-    fun messageHandler(androidMessageHandler: AndroidMessageHandler): MessageHandler
+    fun bindMessageHandler(androidMessageHandler: AndroidMessageHandler): MessageHandler
 
-    @ContributesAndroidInjector
-    fun mainActivityInjector(): MainActivity
+    @Binds
+    fun bindActivity(mainActivity: MainActivity): Activity
 
-    @ContributesAndroidInjector(modules = [SearchInputModule::class])
-    fun searchInputActivityInjector(): SearchInputActivity
+    @ContributesAndroidInjector(modules = [FragmentModule::class])
+    fun contributeMainActivityInjector(): MainActivity
+
 }
