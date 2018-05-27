@@ -4,7 +4,7 @@
     <application>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="ENTER_YOUR_KEY"/>
+            android:value="@string/google_api"/>
         <activity android:name=".SearchInputActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
