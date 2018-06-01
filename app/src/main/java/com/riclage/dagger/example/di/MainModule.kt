@@ -1,26 +1,21 @@
-package com.riclage.dagger.example
+package com.riclage.dagger.example.di
 
 import android.app.Activity
+import android.content.Context
+import com.riclage.dagger.example.AndroidMessageHandler
+import com.riclage.dagger.example.MainActivity
+import com.riclage.dagger.example.MainApp
+import com.riclage.dagger.example.MessageHandler
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.android.ContributesAndroidInjector
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
-import javax.inject.Singleton
 
 
 @Module
 interface MainModule {
 
-    @Singleton
-    @Provides
-    fun provideRetrofit(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://api.example.com")
-            .addConverterFactory(MoshiConverterFactory.create())
-            .build()
-    }
+    @Binds
+    fun bindAppContext(mainApp: MainApp): Context
 
     @Binds
     fun bindMessageHandler(androidMessageHandler: AndroidMessageHandler): MessageHandler

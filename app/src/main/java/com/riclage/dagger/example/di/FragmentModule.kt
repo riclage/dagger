@@ -1,4 +1,4 @@
-package com.riclage.dagger.example
+package com.riclage.dagger.example.di
 
 import com.riclage.blablalines.search.input.SearchInputFragment
 import com.riclage.blablalines.search.input.SearchInputModule

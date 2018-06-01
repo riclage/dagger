@@ -25,6 +25,7 @@ android {
 }
 
 dependencies {
+    implementation project(':common')
     implementation project(':search.input')
     implementation project(':search.result.view')
 
